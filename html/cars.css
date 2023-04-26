@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.{
+    padding: 0px;
+    margin: 0px;
+}
+#header{
+    width: 100%;
+    height: 80vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.519),rgba(0, 0, 0, 0.469)), url(./background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 110vh,100%;
+    background-position: 0px -20vh;
+    position: relative;
+}
+#h1{
+    font-size: 30px;
+    color: transparent;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 30vh;
+    left: -10vw;
+}
+#h2{
+    font-size: 50px;
+    color: transparent;
+    letter-spacing: 10px;
+    position: absolute;
+    top: 35vh;
+    left: -10vw;
+}
+#h3{
+    font-size: 50px;
+    color: transparent;
+    letter-spacing: 10px;
+    position: absolute;
+    bottom: -10vh;
+    right: 5vw;
+    font-weight: lighter;
+}
+#h4{
+    font-size: 30px;
+    color: transparent;
+    letter-spacing: 10px;
+    position: absolute;
+    bottom: -10vh;
+    right: 5vw;
+    font-weight: lighter;
+}
+#hexagon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 18vh;
+    right: 35vw;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    transition: background-color 0.5s;
+    font-size: 20px;
+    cursor: pointer;
+}
+#V{
+    color: transparent;
+    transition: 2s;
+}
+#hexagon:hover{
+    background-color: black;
+    color: white;
+}
+body{
+    background-image: linear-gradient(gray,white);
+    background-size: 100% 500vh;
+    overflow-x: hidden;
+}
+#cars{
+    width: 100%;
+    height: 300vh;
+    position: relative;
+    z-index: -1;
+}
+#car1{
+    position: absolute;
+    top: 20vh;
+    width: 60vw;
+    height: 100vh;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
+
+}
+#car1image{
+    position: relative;
+    right: 50px;
+    bottom: 180px;
+    width: 60vw;
+}
+#car1heading{
+    font-size: 46px;
+    color: white;
+    position: absolute;
+    right: 0px;
+    top: 80px;
+    letter-spacing: 5px;
+}
+#car1info{
+    color: black;
+    width: 450px;
+    position: absolute;
+    right: 30px;
+    font-size: 20px;
+    top: 180px;
+}
+#car2{
+    position: absolute;
+    top: 100vh;
+    right: -80px;
+    width: 50vw;
+    height: 90vh;
+    clip-path: polygon(100% 0%, 100% 51%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+#car2image{
+    position: relative;
+    left: 30px;
+    bottom: 100px;
+    width: 100vw;
+    height:100vh ;
+}
+#car2heading{
+    font-size: 46px;
+    color: white;
+    position: absolute;
+    left: 20px;
+    top: 650px;
+    letter-spacing: 5px;
+}
+#car2info{
+    color: black;
+    width: 450px;
+    position: absolute;
+    left: 30px;
+    font-size: 20px;
+    top: 750px;
+}
+#footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+i{
+    font-size: 30px;
+    padding: 30px;
+}
+#left{
+    position: absolute;
+    left: 30px;
+}
+#lefttext{
+    position: absolute;
+    left: 100px;
+    font-size: 30px;
+}
+#navbar{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    box-shadow: 0px 5px 10px black ;
+    position: sticky;
+    top: 0px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+}
+#mainlist{
+    display: flex; 
+}
+.li{
+    width: 120px;
+    color:white;
+    background-color: black;
+    list-style: none;
+    height: 40px;
+    font-size: 30px;
+    transition: all 0.5s;
+    padding: 20px;
+    text-align: center;
+}
+.li:hover{
+    background-color: gray;
+    border: solid 0.1px white;
+    color: black;
+}
+#sublist{
+    list-style: none;
+    display: none;
+}
+.sli{
+    background-color: black;
+    width: 140px;
+    position: relative;
+    right: 60px;
+    padding: 10px;
+    top: 25px;
+    text-align: center;
+    font-size: 25px;
+}
+.sli:hover{
+    background-color: gray;
+    color: black;
+    border: solid 0.1px white;
+}
+#hov:hover #sublist{
+display: block;
+color: white;
+}
+#last{
+    position: relative;
+    left: 400px;
+}

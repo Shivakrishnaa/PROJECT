@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    *{
+      padding: 0px;
+      margin: 0px;
+      transition: all 1s;
+    }
+    body{
+      background-image: linear-gradient(gray);
+      background-repeat: no-repeat;
+      background-size: 100% 100px;
+      z-index: 1;
+      position: absolute;
+    }
+    #header{
+     position: relative;
+     width: 100%;
+     height: 100vh;
+     background-image: url(./a.png);
+     background-repeat: no-repeat;
+     background-size: 100vw 100vh;
+     display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                             
+     align-items: center;
+     justify-content: center;
+     font-size: 50px;
+     letter-spacing: 15px;
+     color: white;
+    }
+    #left,#right{
+     font-size: 100px;
+     width: 100px;
+     height: 100px;
+     background-color: transparent;
+     border: none;
+     position: absolute;
+     font-weight: bolder;
+     color: white; 
+    }
+    #left{
+     position: absolute;
+     left: 10px;
+     text-shadow: 15px 2px 5px black;
+    }
+    #right{
+     position: absolute;
+     right: 10px;
+     text-shadow: 2px 15px 5px black;
+    }
+    h1{
+     text-shadow: 10px 2px 5px black;
+    }
+    #navbar{
+     width: 100%;
+     height: 80px;
+     background-color: black;
+     box-shadow: 0px 5px 10px black ;
+     position: sticky;
+     top: 0px;
+    }
+    a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+}
+    #mainlist{
+     display: flex; 
+    }
+    .li{
+        width: 120px;
+        color:white;
+        background-color: black;
+        list-style: none;
+        height: 40px;
+        font-size: 30px;
+        transition: all 0.5s;
+        padding: 20px;
+        text-align: center;
+    }
+    .li:hover{
+        background-color: gray;
+        border: solid 0.1px white;
+        color: black;
+    }
+    #sublist{
+        list-style: none;
+        display: none;
+    }
+    .sli{
+        background-color: black;
+        width: 140px;
+        position: relative;
+        right: 20px;
+        padding: 10px;
+        top: 25px;
+        text-align: center;
+        font-size: 25px;
+    }
+    .sli:hover{
+        background-color: gray;
+        color: black;
+        border: solid 0.1px white;
+    }
+   #hov:hover #sublist{
+    display: block;
+    color: white;
+   }
+   #bodyofthepage{
+        position: relative;
+        width: 100%;
+        z-index: -1;
+        height: 500px;
+    }
+    #cars{
+        display: flex;
+        background-image: linear-gradient(white,rgba(128, 128, 128, 0.402),white);
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: baseline;
+        row-gap: 30px;
+        column-gap: 50px;
+        margin-top: 50px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+        box-shadow: 10px 10px 10px black;
+        border-radius: 5px;
+    }
+    img:hover{
+        transform: scale(1.2);
+        rotate: 10deg;
+    }
+    #footer{
+        position: relative;
+        width: 100%;
+        height: 80px;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+    }
+    span{
+        color: white;
+        font-size: 24px;
+        margin-top: 28px;
+    }
+    #search{
+        width: 60%;
+        float: left;
+        height: 40px;
+        border: none;
+        outline: none;
+        font-size: 24px;
+        padding-left: 5px;
+    }
+    i{
+        font-size: 28px;
+        padding-left: 20px;
+        color: white;
+        margin-top: 25px;
+    }
+    #contsearch{
+     width: 30%;
+     height: 40px;
+     position: absolute;
+     top: 20px;
+     right: 30px;
+     background-color: white;
+     border-radius: 10px;
+     box-shadow: 5px 5px 5px black;
+     overflow: hidden;
+   }
+   #but{
+     float: right;
+     width: 30%;
+     height: 30px;
+     margin-right: 10px;
+     background-color: black;
+     color: white;
+     margin-top: 5px;
+     border-radius: 10px;
+   }
+    </style>
+</head>
+<body onload="fun()" >
+    <div id="header">
+        <input type="button" id="left" value="<" onclick="dec()">
+        <input type="button" id="right" value=">" onclick="inc()">
+       <h1>BIG BOYS TOYS</h1> 
+    </div>
+    <div id="navbar">
+        <ul id="mainlist"> 
+            <li class="li"><a href="./carpage.html">HOME</a></li>
+            <li class="li" id="hov">CARS
+                <ul id="sublist">
+                    <li class="sli"><a href="./lambo.html">LAMBO</a></li>
+                    <li class="sli"><a href="./CARS.html">BMW</a></li>
+                    <li class="sli">TOYOTA</li>
+                    <li class="sli">TATA</li>
+                </ul>
+            </li>
+            <li class="li"><a href="./Gallery.html">GALLERY</a></li>
+            <li class="li" id="log">LOGOUT</li>
+            <li class="li">QUERYS</li>
+        </ul>
+    </div>
+    <div id="bodyofthepage" onload="rot()">
+        <div id="cars">
+        <img class="a" src="./photos/0.jpg">
+        <img class="a" src="./photos/1.jpg">
+        <img class="a" src="./photos/2.jpg">
+        <img class="a" src="./photos/3.jpg">
+        <img class="a" src="./photos/4.jpg">
+        <img class="a" src="./photos/5.jpg">
+        <img class="a" src="./photos/6.jpg">
+        <img class="a" src="./photos/7.jpg">
+        <img class="a" src="./photos/8.jpg">
+        <img class="a" src="./photos/9.jpg">
+   
+
+    </div>
+<div id="footer">
+    <span>FOLLOW US</span>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-facebook-f"></i>
+    <i class="fa-brands fa-youtube"></i>
+    <div id="contsearch">
+        <input type="text" placeholder="Enter your e-mail" id="search">
+        <input type="button" value="submit" id="but">
+    </div>
+</div>
+</div>
+    <script>
+        var img=["a.png","b.jpg","c.jpg","d.jpg","e.jpg","f.jpg","g.jpg","h.jpg","i.jpg","j.jpg"]
+        var imgnum=0;
+        function inc()
+        {
+            imgnum++;
+            if(imgnum>=10)
+            {
+                imgnum=0;
+                document.getElementById("header").style.backgroundImage="url("+img[imgnum]+")"
+            }
+            else
+            {
+                document.getElementById("header").style.backgroundImage="url("+img[imgnum]+")"
+            }
+        }
+        function dec()
+        {
+            imgnum--;
+            if(imgnum<=0)
+            {
+                imgnum=9;
+                document.getElementById("header").style.backgroundImage="url("+img[imgnum]+")"
+            }
+            else
+            {
+            document.getElementById("header").style.backgroundImage="url("+img[imgnum]+")"
+            }
+        }
+        var images=document.getElementsByClassName("a")
+        var randomnum=Math.floor(Math.random()*10);
+        console.log(randomnum)
+       /* function rot()
+        {
+            for(i=0;i<=images.length;i++)
+            {
+               
+              if (randomnum%2==0)
+              {
+                images[i].style.rotate=randomnum+"deg"
+              }
+              else
+              {
+                images[i].style.rotate="-"+randomnum+"deg"
+              }
+              images[i].setAttribute("src","./photos"+i+"./jpg");
+           }
+        }*/
+    </script>
+</body>
+</html>

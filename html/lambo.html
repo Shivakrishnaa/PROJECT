@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+ <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#header{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.531),rgba(0, 0, 0, 0.484)),url(./lambo.background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 110vh,100%;
+    background-position: 0px -20vh;
+    position: relative;
+}
+#h1{
+    font-size: 30px;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 30vh;
+    left: -10vw;
+}
+#h2{
+    font-size: 55px;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    position: absolute;
+    top: 35vh;
+    left: -10vw;
+}
+#h3{
+    font-size: 30px;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    position: absolute;
+    top: 510px;
+    right: 5vw;
+    font-weight: lighter;
+}
+#h4{
+    font-size: 30px;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    position: absolute;
+    top: 470px;
+    right: 5vw;
+    font-weight: lighter;
+}
+#hexagon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 18vh;
+    right: 35vw;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    transition: background-color 0.5s;
+    font-size: 20px;
+    cursor: pointer;
+}
+#v{
+    color: transparent;
+    transition: color 2s;
+}
+#hexagon:hover{
+    background-color: black;
+    color: white;
+}
+
+
+#navbar{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    box-shadow: 0px 5px 10px black ;
+    position: sticky;
+    top: 0px;
+}
+#mainlist{
+    display: flex; 
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+}
+.li{
+    width: 120px;
+    color:white;
+    background-color: black;
+    list-style: none;
+    height: 40px;
+    font-size: 30px;
+    transition: all 0.5s;
+    padding: 20px;
+    text-align: center;
+}
+.li:hover{
+    background-color: gray;
+    border: solid 0.1px white;
+    color: black;
+}
+#sublist{
+    list-style: none;
+    display: none;
+}
+.sli{
+    background-color: black;
+    width: 140px;
+    position: relative;
+    right: 20px;
+    padding: 10px;
+    top: 25px;
+    text-align: center;
+    font-size: 25px;
+}
+.sli:hover{
+    background-color: gray;
+    color: black;
+    border: solid 0.1px white;
+}
+#hov:hover #sublist{
+display: block;
+color: white;
+}
+
+
+body{
+    background-image: linear-gradient(black,rgb(240,192,240));
+    background-size: 100vw 1000vh;
+    background-repeat: no-repeat;
+}
+#cars{
+    width: 95vw;
+    height: 400vh;
+    position: relative;
+    z-index: -1;
+}
+#car1{
+    position: absolute;
+    top: 0vh;
+    width: 60vw;
+    height: 55vh;
+    clip-path: polygon(0 0,100% 0%,69% 100%,0% 100%);
+}
+#car1image{
+    position: relative;
+    right: 30px;
+    bottom: 90px;
+    width: 60vw;
+}
+#car1heading{
+    border-color: rgb(150, 150, 3);
+    color: rgb(150, 150, 3);
+    border-style: outset;
+    border-width: 8px;
+    border-height: 8px;
+    font-size: 20px;
+    position: absolute;
+    padding-left: 50px;
+    right: 30px;
+    top: 80px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#car1info{
+    color: white;
+    width: 300px;
+    position: absolute;
+    right: 80px;
+    top: 170px;
+}
+#car2{
+    position: absolute;
+    top: 60vh;
+    right: -35px;
+    height: 80vh;
+    clip-path: polygon(88% 0,100% 35%,100% 100%,35% 100%,0 65%);
+}
+#car2image{
+    position: relative;
+    right: -12px;
+    bottom: -90px;
+    width: 55vw;
+}
+#car2heading{
+    border-color: rgb(1, 122, 156);
+    color: rgb(1, 122, 156);
+    border-style: outset;
+    border-width: 8px;
+    border-height: 8px;
+    font-size: 20px;
+    position: absolute;
+    padding-left: 40px;
+    left: 43px;
+    top: 80vh;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#car2info{
+    color: white;
+    width: 300px;
+    position: absolute;
+    left: 30px;
+    top: 95vh;
+}
+#car3{
+    position: absolute;
+    top: 160vh;
+    width: 50vw;
+    height: 120vh;
+    clip-path: polygon(0% 30%, 75% 0%, 100% 50%, 75% 60%, 60% 100%);
+}
+#car3image{
+    position: relative;
+    right: 10px;
+    bottom: 0px;
+    width: 50vw;
+    height: 60vh;
+}
+#car3heading{
+    border-color: rgb(184, 183, 183);
+    color: rgb(184, 183, 183);
+    border-style: outset;
+    border-width: 8px;
+    border-height: 8px;
+    font-size: 20px;
+    position: absolute;
+    padding-left: 40px;
+    right: 100px;
+    top: 155vh;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#car3info{
+    color: white;
+    width: 300px;
+    position: absolute;
+    right: 140px;
+    top: 170vh;
+}
+#car4{
+    position: absolute;
+    top: 240vh;
+    right: -35px;
+    height: 90vh;
+    clip-path: polygon(88% 0,100% 35%,100% 100%,0 100%,0 45%);
+}
+#car4image{
+    position: relative;
+    left: 0px;
+    bottom: 20px;
+    width: 70vw;
+}
+#car4heading{
+    border-color: black;
+    border-style: outset;
+    border-width: 8px;
+    border-height: 8px;
+    font-size: 20px;
+    padding-left: 40px;
+    color: black;
+    position: absolute;
+    left: 35px;
+    top: 230vh;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#car4info{
+    color: white;
+    width: 260px;
+    position: absolute;
+    left: 24px;
+    top: 245vh;
+}
+#footer{
+    position: absolute;
+    bottom: 0px;
+    width: 98.7vw;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+i{
+    font-size: 30px;
+    padding: 30px;
+}
+#left{
+    position: absolute;
+    left: 30px;
+}
+#lefttext{
+    position: absolute;
+    left: 100px;
+    font-size: 30px;
+}
+
+#a{
+    position: relative;
+    width: 50%;
+    height: 300px;
+    top: 320vh;
+    left: 30px;
+    background-image: url(./lambo.background.jpg);
+    background-size: 100%;
+    transition: background-size 2s;
+    float: left;
+    background-position: center;
+    
+}
+#a:hover{
+    background-size: 120%;
+}
+#ah{
+    font-size: 30px;
+    padding-top: 0px;
+    padding-left: 190px;
+    color: black; 
+}
+#b{
+    position: relative;
+    width: 50%;
+    height: 300px;
+    top: 320vh;
+    right: -30px;
+    background-image: url(./lambo5.jpg);
+    background-size: 100%;
+    transition: background-size 2s;
+    float: left;
+    background-position: center;
+}
+#b:hover{
+    background-size: 120%;
+}
+#bh{
+    font-size: 30px;
+    padding-top: 0px;
+    padding-left: 190px;
+    color: white; 
+}
+  </style>
+</head>
+<body>
+    
+    <div id="header">
+        <h1 id="h1">Sports</h1>
+        <h1 id="h2">LAMBORGHINI</h1>
+        <h1 id="h3">Models Overview</h1>
+        <h1 id="h4">All Brand <br> Models</h1>
+        <div id="hexagon" onmouseover="hoverhexa()" onmouseout="hoverhexaout()"> 
+            <span id="v">V</span>
+        </div>
+    </div>
+    <div id="navbar">
+        <ul id="mainlist"> 
+            <li class="li"><a href="./carpage.html">HOME</a></li>
+            <li class="li" id="hov">CARS
+                <ul id="sublist">
+                    <li class="sli"><a href="./lambo.html">LAMBO</a></li>
+                    <li class="sli"><a href="./CARS.html">BMW</a></li>
+                    
+                    <li class="sli">TOYOTA</li>
+                    <li class="sli">TATA</li>
+                </ul>
+            </li>
+            <li class="li"><a href="./Gallery.html">GALLERY</a></li>
+            <li class="li" id="log">LOGOUT</li>
+            <li class="li">QUERYS</li>
+        </ul>
+    </div>
+    <div id="cars">
+        <div id="car1">
+            <img id="car1image" src="./lambo1.jpg">
+        </div>
+        <h1 id="car1heading">lamborghini sina</h1>
+        <p id="car1info">
+            The Lamborghini Sián FKP 37 is a mid-engine hybrid sports car produced by the Italian automotive manufacturer Lamborghini. Unveiled online on 3 September 2019, the Sián is the first hybrid production vehicle produced by the brand.
+        </p>
+
+        <div id="car2">
+            <img id="car2image" src="./lambo2.jpg">
+        </div>
+        <h1 id="car2heading">lamborghini sina</h1>
+        <p id="car2info">
+            The car has been designed to offer the widest possible range of customizations: from the exterior, which can be configured in fully  exposed carbon fiber, with custom colors, shaded paintwork and specific liveries; to the interior, with special trim and an infinite number of combinations of colors and materials. An innovative “touch and feel” leather is also available, specially developed for the Sián FKP 37, which is extremely pleasant to the touch.
+        </p>
+<div id="car3">
+            <img id="car3image" src="./lambo3.jpg">
+        </div>
+        <h1 id="car3heading">lamborghini sina</h1>
+        <p id="car3info">
+            With the Sián FKP 37, a new autonomous technology is entering the automotive world. At the back of the engine hood are autonomous vent flaps actuated by smart materials that are temperature sensitive by nature. These flaps open independently when the temperature around the exhausts becomes too extreme, without the aid of electric controls and sensors, relying only on the thermal distortion of the material. With its carbon-fiber monocoque, titanium intake valves, active aerodynamics and rear-wheel steering, the Sián FKP 37 employs cutting-edge technology everywhere—not only in the world’s first supercapacitor hybrid system. 
+        </p>
+
+        <div id="car4">
+            <img id="car4image" src="./lambo4.jpg">
+        </div>
+        <h1 id="car4heading">lamborghini sina</h1>
+        <p id="car4info">
+            The new Sián FKP 37 is a technological tour de force, able to fire up incredibly strong emotions. The most extraordinary innovation is the hybrid system, which delivers maximum power with minimal weight. The innovative, lightweight mild-hybrid architecture uses a lithium-ion supercapacitor, which is three times more powerful than a battery of the same weight. It is a low-voltage 48V system, enabling peak currents of up to 600A. Powered by this current, the electric motor delivers engine torque directly to the rear wheels, and during braking uses the inertia to recharge the capacitor. The electrical power flow is symmetrical, for the same efficiency during the charge and discharge cycles, without overheating.
+        </p>
+        
+        <div id="a">
+            <h1 id="ah">LAMBORGHINI</h1>
+        </div>
+        <div id="b">
+            <h1 id="bh">LAMBORGHINI</h1>
+        </div>
+        
+        <div id="footer">
+        <i id="left" class="fa-regular fa-copyright"></i>
+        <span id="lefttext">Copyright belongs to SHIVA</span>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-weibo"></i>
+        <i class="fa-brands fa-discord"></i>
+      </div>
+    </div>
+
+    <script>
+    function header()
+{
+    document.getElementById("h1").style.transform="translate(20vw,0vh)"
+    document.getElementById("h1").style.color="white"
+    document.getElementById("h1").style.transition="transform 0.5s,color 0.5s"
+
+    document.getElementById("h2").style.transform="translate(20vw,0vh)"
+    document.getElementById("h2").style.color="white"
+    document.getElementById("h2").style.transition="transform 0.5s,color 0.5s"
+
+    document.getElementById("h3").style.transform="translate(0vw,-40vh)"
+    document.getElementById("h3").style.color="white"
+    document.getElementById("h3").style.transition="transform 0.5s,color 0.5s"
+
+    document.getElementById("h4").style.transform="translate(0vw,-25vh)"
+    document.getElementById("h4").style.color="white"
+    document.getElementById("h4").style.transition="transform 0.5s,color 0.5s"
+
+    document.getElementById("hexagon").style.backgroundColor="white"
+    document.getElementById("v").style.color="black"
+}
+var a=setTimeout(header,500)
+function hoverhexa(){
+    document.getElementById("hexagon").style.backgroundColor="black"
+    document.getElementById("v").style.color="white"
+}
+function hoverhexaout()
+{
+    document.getElementById("hexagon").style.backgroundColor="white"
+    document.getElementById("v").style.color="black"
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE-edge">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./css/index.css">
+   <script src="./javaScript/index.js"></script>
+</head>
+<body>
+    <div id="outerDiv">
+      <div id="innerDiv">
+         <h1 id="heading">LOGIN</h1>
+      <form >
+         <div id="emailDiv">
+            <input id="usid" class="in" placeholder="ENTER E-MAIL">
+         </div>
+         <span id="result"></span>
+         <div id="passdiv">
+            <input type="password" class="in" id="pass" placeholder="ENTER PASSWORD">
+            <img src="./asset/close.png" onmousedown="passvis()" onmouseup="passhide()" id="visible">
+         </div>
+        <input type="button" id="but" value="login" onclick="logintohomepage()">
+      </form>
+      </div>
+    </div>
+</body>
+</html>

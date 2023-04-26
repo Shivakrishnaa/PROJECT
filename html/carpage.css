@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: linear-gradient(180deg,rgb(128, 128, 128),white);
+    background-repeat: no-repeat;
+   background-size: 100% 2000px;
+   z-index: 1;
+}
+#blacked{
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+}
+#webheading{
+    position: absolute;
+    left: 40px;
+    top: 120px;
+    z-index: 3;
+    color: white;
+    font-size: 100px;
+    letter-spacing: 30px;
+    text-shadow: 2px 2px 5px black;
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Shrikhand', cursive;
+}
+#mainvideo{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(0, 66, 66);
+    overflow: hidden;
+    box-shadow: 0px 5px 5px black;
+}
+video{
+    width: 100%;
+    position: relative;
+    bottom: 10px;
+}
+#navbar{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    box-shadow: 0px 5px 10px black ;
+    position: sticky;
+    top: 0px;
+}
+#mainlist{
+    display: flex; 
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+}
+.li{
+    width: 120px;
+    color:white;
+    background-color: black;
+    list-style: none;
+    height: 40px;
+    font-size: 30px;
+    transition: all 0.5s;
+    padding: 20px;
+    text-align: center;
+}
+.li:hover{
+    background-color: gray;
+    border: solid 0.1px white;
+    color: black;
+}
+#sublist{
+    list-style: none;
+    display: none;
+}
+.sli{
+    background-color: black;
+    width: 140px;
+    position: relative;
+    right: 20px;
+    padding: 10px;
+    top: 25px;
+    text-align: center;
+    font-size: 25px;
+}
+.sli:hover{
+    background-color: gray;
+    color: black;
+    border: solid 0.1px white;
+}
+#hov:hover #sublist{
+display: block;
+color: white;
+}
+#last{
+    position: relative;
+    left: 400px;
+}
+#log{
+    padding-left: 40px;
+    padding-right: 30px;
+}
+.heading2{
+    text-align: center;
+    color: red;
+    padding-top: 20px;
+}
+#contparts{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parts{
+width: 25%;
+height: 300px;
+float: left;
+border-radius: 20px;
+border-left: 5px solid white;
+transition: box-shadow 0.5s, width 0.5s;
+}
+.parts:hover{
+box-shadow: -15px 0px 5px black;
+width: 40%;
+}
+.para1{
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    padding-top: 50px;
+}
+.heading1{
+    padding-top: 80px;
+    padding-left: 80px;
+    color: black;
+    font-size: 28px;
+}
+#heading1{
+    padding-top: 0px;
+}
+.para{
+    font-size: 24px;
+    color: white;
+    text-align: justify;
+    padding: 80px;
+    padding-top: 20px;
+    text-indent: 50px;
+    line-height: 35px;
+}
+#bodyofthepage{
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+#loc{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    width: 60%;
+    height: 400px;
+    border-radius: 30px;
+    border: 5px solid black;
+    box-shadow: 8px 8px 5px black;
+}
+#footer{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: grey;
+    display: flex;
+}
+span{
+    font-size: 24px;
+    margin-top: 28px;
+}
+#search{
+    width: 60%;
+    float: left;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    padding-left: 5px;
+}
+i{
+    
+    font-size: 28px;
+    padding-left: 20px;
+    color: white;
+    margin-top: 25px;
+}
+#contsearch{
+width: 30%;
+height: 40px;
+position: absolute;
+top: 20px;
+right: 30px;
+background-color: white;
+border-radius: 10px;
+box-shadow: 5px 5px 5px black;
+overflow: hidden;
+}
+#but{
+float: right;
+width: 30%;
+height: 30px;
+margin-right: 10px;
+background-color: black;
+color: white;
+margin-top: 5px;
+border-radius: 10px;
+}
